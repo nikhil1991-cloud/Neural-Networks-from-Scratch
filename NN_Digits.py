@@ -4,7 +4,12 @@ import numpy as np
 from keras.datasets import mnist
 import random
 
-'''We will be traing an artificial neural network to recognize the hand written digits from the mnist data set. Since this is an artificial neural network, we will have to reshape each 2-D image into a 1-D array. The total number of pixels of each image will be the variables for our input layer. If its an (m,n) image then our input variables will be m*n. We will be using two hidden layers with sigmoid and softmax activation functions. For this example we are using 1000 nodes for the 1st hidden layer. We have set the learning rate (alpha) = 0.01 and we will run SGD for 200 iterations. To see if our code is working correctly or not, we will only use the 1st 1000 images from the train/test dataset.'''
+'''We will be traing an artificial neural network to recognize the hand written digits from the mnist data set. 
+Since this is an artificial neural network, we will have to reshape each 2-D image into a 1-D array. The total number 
+of pixels of each image will be the variables for our input layer. If its an (m,n) image then our input variables will be m*n. 
+We will be using two hidden layers with sigmoid and softmax activation functions. For this example we are using 1000 nodes 
+for the 1st hidden layer. We have set the learning rate (alpha) = 0.01 and we will run SGD for 200 iterations. To see if our code 
+is working correctly or not, we will only use the 1st 1000 images from the train/test dataset.'''
 
 
 #Read the MNIST Data set
@@ -120,4 +125,7 @@ print("Test accuracy is " + str(test_ac))
 #You can plot the Loss_function as a function of iterations to see if it is minimized.
 #You can play with different values of iterations, learning rate and hidden layer nodes to see if your accuracy improves
 
-'''Optional: Another way to optimize this neural network is to run a Markov Chain Monte Carlo random walk in the 4-D parameter space of iterations, learning rate, nodes and number of hidden layers for N number of steps. At each step, use the trial parameters  and train the NN on the dataset, compute the accuracy and accept the trail parameters if the accuracy is better than the previous step. You can used Metropolis-Hasting Sampling to sample the parameter space'''
+'''Optional: Another way to optimize this neural network is to run a Markov Chain Monte Carlo random walk in the 4-D parameter
+space of iterations, learning rate, nodes and number of hidden layers for N number of steps. At each step, use the trial parameters
+and train the NN on the dataset, compute the accuracy and accept the trail parameters if the accuracy is better than the previous step.
+You can used Metropolis-Hasting Sampling to sample the parameter space'''
