@@ -1,7 +1,10 @@
 import numpy as np
 import pandas as pd
 
-'''We will use ANN to predict if the patient is prone to heart disease or not given a set of input parameters like age,sex, blood pressure etc. These will be our input parameters for our input layer. We will be using a 2 Layer ANN with ReLU and Sigmoid activation functions. This ANN is parametrized by specific values of learning rate (alpha), number of iterations and number of nodes for the hidden layer. You can use different values for these parameters and see if you get a better accuracy.'''
+'''We will use ANN to predict if the patient is prone to heart disease or not given a set of input parameters like age,sex, blood pressure etc. 
+These will be our input parameters for our input layer. We will be using a 2 Layer ANN with ReLU and Sigmoid activation functions. This ANN is 
+parametrized by specific values of learning rate (alpha), number of iterations and number of nodes for the hidden layer. You can use different 
+values for these parameters and see if you get a better accuracy.'''
 
 #Perform standard scaling on the data set
 def StandardScaler(Data):
