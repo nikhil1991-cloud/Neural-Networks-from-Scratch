@@ -65,16 +65,16 @@ def sigmoid(x):
 def d_sigmoid(x):
     return sigmoid(x)*(1-sigmoid(x))
     
-def eta(x):
-    ETA = 0.0000000001
-    return np.maximum(x, ETA)
+def replace_zero(x):
+    n = 0.00000001
+    return np.maximum(x, n)
 
 def binary_ce_loss(y, yhat):
     nsample = len(y)
     yhat_inv = 1 - yhat
     y_inv = 1 - y
-    yhat = eta(yhat)
-    yhat_inv = eta(yhat_inv)
+    yhat = replace_zero(yhat)
+    yhat_inv = replace_zero(yhat_inv)
     loss = -1/nsample * (np.sum(np.multiply(np.log(yhat), y) + np.multiply((y_inv), np.log(yhat_inv))))
     return loss
     
