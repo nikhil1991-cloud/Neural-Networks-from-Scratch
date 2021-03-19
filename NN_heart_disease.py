@@ -75,7 +75,7 @@ def binary_ce_loss(y, yhat):
     y_inv = 1 - y
     yhat = replace_zero(yhat)
     yhat_inv = replace_zero(yhat_inv)
-    loss = -1/nsample * (np.sum(np.multiply(np.log(yhat), y) + np.multiply((y_inv), np.log(yhat_inv))))
+    loss = (-1) * (np.sum(np.multiply(np.log(yhat), y) + np.multiply((y_inv), np.log(yhat_inv))))
     return loss
     
 def dRelu(x):
